@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory
+        android:title="@string/pref_general_settings_title"
+        android:key="general_settings">
+
+        <CheckBoxPreference
+            android:key="@string/pref_key_retrieve_video_duration_time"
+            android:title="@string/pref_retrieve_video_duration_time"
+            android:summary="@string/pref_retrieve_video_duration_time_info"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="@string/pref_key_cache_thumbnail_images"
+            android:title="@string/pref_cache_thumbnail_images"
+            android:summary="@string/pref_cache_thumbnail_images_info"
+            android:defaultValue="true"/>
+
+        <!--
+        android:defaultValue="true"
+        -->
+        <CheckBoxPreference
+            android:key="@string/pref_key_retrieve_thumbnail_from_video"
+            android:title="@string/pref_retrieve_thumbnail_from_video"
+            android:summary="@string/pref_retrieve_thumbnail_from_video_info"
+            android:dialogTitle="Nearchus Server Port Number"
+            android:dialogMessage="Enter port number"
+            android:defaultValue="8443"
+            android:inputType="number"
+            />
+
+        <EditTextPreference
+            android:id="@+id/listPrefSurverPortNumber"
+            android:key="@string/pref_key_thumbnail_frame_at_time"
+            android:title="Thumbnail Frame at Time (in milliseconds)"
+            android:summary="Enter Thumbnail Frame at Time"
+            android:dialogTitle="Thumbnail Frame at Time"
+            android:dialogMessage="Enter Thumbnail Frame at Time"
+            android:defaultValue="500"
+            android:inputType="number"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
